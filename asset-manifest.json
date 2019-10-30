@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "./static/css/main.c4c53c96.chunk.css",
+    "main.js": "./static/js/main.22e78d62.chunk.js",
+    "main.js.map": "./static/js/main.22e78d62.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.55ceb434.js",
+    "runtime~main.js.map": "./static/js/runtime~main.55ceb434.js.map",
+    "static/css/2.9d55339e.chunk.css": "./static/css/2.9d55339e.chunk.css",
+    "static/js/2.9df66624.chunk.js": "./static/js/2.9df66624.chunk.js",
+    "static/js/2.9df66624.chunk.js.map": "./static/js/2.9df66624.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.a988fc90fc96205ade4603e7261381f1.js": "./precache-manifest.a988fc90fc96205ade4603e7261381f1.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.9d55339e.chunk.css.map": "./static/css/2.9d55339e.chunk.css.map",
+    "static/css/main.c4c53c96.chunk.css.map": "./static/css/main.c4c53c96.chunk.css.map",
+    "static/media/brodyquest.mp3": "./static/media/brodyquest.6259cc84.mp3",
+    "static/media/easter-egg.png": "./static/media/easter-egg.e702bd5f.png",
+    "static/media/label-icon.7024a8de.svg": "./static/media/label-icon.7024a8de.svg",
+    "static/media/menu-icon.150ff341.svg": "./static/media/menu-icon.150ff341.svg",
+    "static/media/theme-icon.de589920.svg": "./static/media/theme-icon.de589920.svg"
+  }
+}
