@@ -189,6 +189,15 @@ export class FlowChart extends Component {
     const ESCAPE = 27;
     if (event.keyCode === ENTER) {
       this.handleNodeClick(node);
+      console.log(node.id.startsWith('data'));
+      if (node.id.startsWith('data/')) {
+        window.location =
+          'http://localhost:5000/table_detail/gold/hive/test_schema/' +
+          node.id.substring(5); // strip 'data/'
+      } else {
+        window.location =
+          'http://localhost:5000/user/roald.amundsen@example.org?' + node.id;
+      }
     }
     if (event.keyCode === ESCAPE) {
       this.handleChartClick();
