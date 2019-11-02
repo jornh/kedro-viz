@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import store from '../../store';
-import { resetData } from '../../actions';
+import { resetData, toggleNodeClicked } from '../../actions';
 import Wrapper from '../wrapper';
 import formatData from '../../utils/format-data';
 import { getInitialState, loadData } from './load-data';
@@ -32,6 +32,8 @@ class App extends React.Component {
    */
   resetStoreData(formattedData) {
     this.store.dispatch(resetData(formattedData));
+    this.store.dispatch(toggleNodeClicked('data/example_train_x'));
+    this.store.dispatch(toggleNodeClicked('data/example_train_x'));
   }
 
   render() {
