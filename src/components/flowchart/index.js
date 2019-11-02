@@ -24,6 +24,7 @@ export class FlowChart extends Component {
     this.state = {
       tooltipVisible: false,
       tooltipIsRight: false,
+      //      nodeSelected: "data/example_model",
       tooltipText: null,
       tooltipX: 0,
       tooltipY: 0
@@ -44,6 +45,7 @@ export class FlowChart extends Component {
     this.initZoomBehaviour();
     this.drawChart();
     this.zoomChart();
+    //    this.onToggleNodeClicked(null);
     window.addEventListener('resize', this.handleWindowResize);
   }
 
@@ -57,6 +59,9 @@ export class FlowChart extends Component {
     }
     if (prevProps.zoom !== this.props.zoom) {
       this.zoomChart();
+    }
+    if (prevProps.nodeClicked !== this.props.nodeClicked) {
+      this.onToggleNodeClicked();
     }
     this.drawChart();
   }
@@ -245,6 +250,7 @@ export class FlowChart extends Component {
     const {
       tooltipVisible,
       tooltipIsRight,
+      //      nodeSelected,
       tooltipText,
       tooltipX,
       tooltipY
@@ -287,6 +293,7 @@ export class FlowChart extends Component {
           className={classnames('pipeline-flowchart__tooltip kedro', {
             'tooltip--visible': tooltipVisible,
             'tooltip--right': tooltipIsRight
+            //            'node--selected': nodeSelected
           })}
           style={{ transform: `translate(${tooltipX}px, ${tooltipY}px)` }}>
           <span>{tooltipText}</span>
@@ -301,6 +308,7 @@ export const mapStateToProps = state => ({
   layout: getLayout(state),
   linkedNodes: getLinkedNodes(state),
   centralNode: getCentralNode(state),
+  //nodeSelected: state.nodeSelected,
   textLabels: state.textLabels,
   view: state.view,
   zoom: getZoomPosition(state)
